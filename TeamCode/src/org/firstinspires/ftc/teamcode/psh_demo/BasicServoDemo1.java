@@ -16,6 +16,8 @@ public class BasicServoDemo1 extends OpMode {
 
     public void loop() {
         float yPos = gamepad1.left_stick_y;
+
+        // Servo has a range from 0 to 1, set its rotation based on the joystick
         backServo.setPosition(0.5 - 0.5* gamepad1.left_stick_y);
 
         telemetry.addData("Stick Position", String.format("%.2g", yPos));
